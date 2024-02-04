@@ -13,9 +13,9 @@ pipeline{
         steps {
             dir ('nginx') {
                 sh """
-                    docker build -t shaytanchik/nginx-jenkins2:1.${env.BUILD_NUMBER} . 
-                    docker push shaytanchik/nginx-jenkins2:1.${env.BUILD_NUMBER}
-                    docker rmi -f shaytanchik/nginx-jenkins2:1.${env.BUILD_NUMBER}
+                    docker build -t shaytanchik/nginx-laba2:1.${env.BUILD_NUMBER} . 
+                    docker push shaytanchik/nginx-laba2:1.${env.BUILD_NUMBER}
+                    docker rmi -f shaytanchik/nginx-laba2:1.${env.BUILD_NUMBER}
                 """
            }
         }
@@ -25,9 +25,9 @@ pipeline{
         steps {
             dir ('apache') {
                 sh """
-                    docker build -t shaytanchik/apache-jenkins2:1.${env.BUILD_NUMBER} .
-                    docker push shaytanchik/apache-jenkins2:1.${env.BUILD_NUMBER}
-                    docker rmi -f shaytanchik/apache-jenkins2:1.${env.BUILD_NUMBER}
+                    docker build -t shaytanchik/apache-laba2:1.${env.BUILD_NUMBER} .
+                    docker push shaytanchik/apache-laba2:1.${env.BUILD_NUMBER}
+                    docker rmi -f shaytanchik/apache-laba2:1.${env.BUILD_NUMBER}
                 """
                 }
             }
