@@ -29,6 +29,7 @@ pipeline{
                     docker push shaytanchik/apache-jenkins2:1.${env.BUILD_NUMBER}
                     docker rmi -f shaytanchik/apache-jenkins2:1.${env.BUILD_NUMBER}
                 """
+                }
             }
         }
     }
